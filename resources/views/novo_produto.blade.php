@@ -20,6 +20,9 @@ Produto - Novo
                                  <input type = "text" name = "preco" class="form-control" placeholder="Preço" required="required">
                             </div>
                             <div class="form-group pt-3 pb-3">
+                                <input input type = "text" name = "id_fornecedor" class="form-control" placeholder="ID Fornecedor" required="required">
+                            </div>
+                            <div class="form-group pt-3 pb-3">
                                 <button type="submit" class="btn btn-success">Cadastrar</button>
                             </div>
                          </form>
