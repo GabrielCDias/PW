@@ -1,15 +1,8 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lista Produtos</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
-</head>
-<body>
+@extends('template')
 
-    <div class="container">
+@section('conteudo')
+@routes
+<div class="container">
             <div class="table-overflow" style= "height: 750; overflow: auto;">
                 <table class="table table-bordered table-striped">
                     <thead class="thead-dark">
@@ -25,6 +18,10 @@
                         <td>{{$p->nome}}</td>
                         <td>{{$p->quantidade}}</td>
                         <td>{{$p->preco}}</td>
+                        <td>
+                            <a href="{{ route('produtos_alterar', ['id' => $p->id]) }}" class="btn btn-warning">Alterar</a>
+                            <a href="#" onclick="excluir({{ $p->id }})" class="btn btn-danger">Excluir</a>
+                        </td>
                     </tr>
                     @endforeach
 
@@ -32,7 +29,14 @@
                 </table>
             </div>
         </div>
+</table>
 
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js" integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf" crossorigin="anonymous"></script>
-</body>
-</html>
+<script>
+    function excluir(id){
+        if (confirm(`Deseja realmente excluir o produto ${id}?`)){
+            location.href = route('produtos_excluir', {'id':id});
+        }
+    }
+</script>
+@endsection
+

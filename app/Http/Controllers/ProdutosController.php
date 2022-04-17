@@ -29,8 +29,37 @@ class ProdutosController extends Controller
         return redirect()->route('produtos_listar');
     }
 
-    function plistar(){
+    function pListar(){
         $produtos = Produto::all();
         return view('lista_produto',['produtos' => $produtos]);
+    }
+
+    function pAlterar($id){
+        $produto = Produto::findOrFail($id);
+
+        return view('altera_produto', ['produto' => $produto]);
+    }
+
+    function pSalvar(Request $req){
+        $id = $req->input('id');
+        $nome = $req->input('nome');
+        $quantidade = $req->input('quantidade');
+        $preco = $req->input('preco');
+
+        $produto = Produto::findOrFail($id);
+        $produto->nome = $nome;
+        $produto->quantidade = $quantidade;
+        $produto->preco = $preco;
+
+        $produto->save();
+
+        return redirect()->route('produtos_listar');
+    }
+
+    function pExcluir($id){
+        $produto = Produto::findOrFail($id);
+        $produto->delete();
+
+        return redirect()->route('produtos_listar');
     }
 }
