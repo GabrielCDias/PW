@@ -37,6 +37,12 @@ class FornecedoresController extends Controller
         return view('lista_fornecedor', ['fornecedores' => $fornecedores]);
     }
 
+    function produtos_fornecedor($id){
+        $fornecedor = Fornecedor::findOrFail($id);
+
+        return view('lista_produtos_fornecedor', ['fornecedores' => $fornecedores]);
+    }
+
     function fAlterar($id){
         $fornecedor = Fornecedor::findOrFail($id);
 

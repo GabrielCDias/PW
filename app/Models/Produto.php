@@ -4,15 +4,14 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
-
-use App\Models\Produto;
+use App\Models\Fornecedor;
 
 class Produto extends Model
 {
     use HasFactory;
     protected $table = "produtos";
 
-    function fornecedor(){
+    function fornecedores(){
         return $this->belongsTo(Fornecedor::class, 'id_fornecedor', 'id');
     }
 }

@@ -18,11 +18,13 @@ class ProdutosController extends Controller
         $nome = $req->input('nome');
         $quantidade= $req->input('quantidade');
         $preco = $req->input('preco');
+        $id_fornecedor = $req->input('id_fornecedor');
 
         $produto = new Produto();
         $produto->nome = $nome;
         $produto->quantidade = $quantidade;
         $produto->preco = $preco;
+        $produto->id_fornecedor = $id_fornecedor;
 
         $produto->save();
 
@@ -32,6 +34,12 @@ class ProdutosController extends Controller
     function pListar(){
         $produtos = Produto::all();
         return view('lista_produto',['produtos' => $produtos]);
+    }
+
+    function produtos_fornecedor($id_fornecedor){
+        $produtos = Produto::findOrFail($id_fornecedor);
+
+        return view('lista_produtos_fornecedor', ['produtos' => $produtos]);
     }
 
     function pAlterar($id){

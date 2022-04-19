@@ -7,6 +7,7 @@
                 <table class="table table-bordered table-striped">
                     <thead class="thead-dark">
                         <tr>
+                            <th scope="col">ID</th>
                             <th scope="col">Nome</th>
                             <th scope="col">Endereço</th>
                             <th scope="col">CEP</th>
@@ -17,15 +18,17 @@
                     <tbody>
                     @foreach($fornecedores as $f)
                     <tr>
+                        <td>{{$f->id}}</td>
                         <td>{{$f->nome}}</td>
                         <td>{{$f->endereco}}</td>
                         <td>{{$f->cep}}</td>
                         <td>{{$f->cidade}}</td>
                         <td>{{$f->estado}}</td>
+                        <td><a href="{{ route('fornecedores_produtos', ['id' => $f->id]) }}" class="btn btn-primary">Produtos</a></td>
                         <td>
                             <a href="{{ route('fornecedores_alterar', ['id' => $f->id]) }}" class="btn btn-warning">Alterar</a>
-                            <a href="#" onclick="excluir({{ $f->id }})" class="btn btn-danger">Excluir</a>
                         </td>
+                        <td><a href="#" onclick="excluir({{ $f->id }})" class="btn btn-danger">Excluir</a></td>
                      </tr>
                     @endforeach
 

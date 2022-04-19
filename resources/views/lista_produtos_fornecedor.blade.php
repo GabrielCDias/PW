@@ -1,7 +1,11 @@
 @extends('template')
 
+@section('titulo')
+Lista Produtos do Fornecedor - #{{ $fornecedor->id }}
+@endsection
+
 @section('conteudo')
-@routes
+<h1>Lista de Produtos do Fornecedor - #{{ $fornecedor->id }}</h1>
 <div class="container">
             <div class="table-overflow" style= "height: 750; overflow: auto;">
                 <table class="table table-bordered table-striped">
@@ -41,4 +45,3 @@
     }
 </script>
 @endsection
-

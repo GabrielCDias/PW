@@ -53,6 +53,8 @@ Route::post('/fornecedores/novo', [FornecedoresController::class, 'fornecedores'
 
 Route::get('/fornecedores/listar', [FornecedoresController::class, 'fListar'])->name('fornecedores_listar');
 
+Route::get('/fornecedores/produtos', [ProdutosController::class, 'produtos_fornecedor'])->name('fornecedores_produtos');
+
 Route::get('/fornecedores/alterar/{id}', [FornecedoresController::class, 'fAlterar'])->name('fornecedores_alterar');
 
 Route::post('/fornecedores/alterar/', [FornecedoresController::class, 'fSalvar'])->name('fornecedores_salvar');
