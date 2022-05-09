@@ -15,33 +15,33 @@
         <div class="row">
         <nav class="navbar navbar-expand-lg navbar navbar-dark bg-primary">
             <div class="container-fluid">
-                <a class="navbar-brand" href="#">Programação WEB</a>
+                <a class="navbar-brand" href="#">HunterPay</a>
                 <button class="navbar-toggler" type="text" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                     <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                        Cliente
+                        
                     </a>
                     <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <li><a class="dropdown-item" href="/clientes/novo">Novo Cliente</a></li>
-                        <li><a class="dropdown-item" href="/clientes/listar">Lista Cliente</a></li>
+                        <li><a class="dropdown-item" href=""></a></li>
+                        <li><a class="dropdown-item" href=""></a></li>
                     </ul>
                     <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                        Produto
+                        
                     </a>
                     <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <li><a class="dropdown-item" href="/produtos/novo">Novo Produto</a></li>
-                        <li><a class="dropdown-item" href="/produtos/listar">Lista Produto</a></li>
+                        <li><a class="dropdown-item" href=""></a></li>
+                        <li><a class="dropdown-item" href=""></a></li>
                     </ul>
 
                     <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                        Fornecedores
+                        
                     </a>
                     <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <li><a class="dropdown-item" href="/fornecedores/novo">Novo Fornecedor</a></li>
-                        <li><a class="dropdown-item" href="/fornecedores/listar">Lista Fornecedor</a></li>
+                        <li><a class="dropdown-item" href=""></a></li>
+                        <li><a class="dropdown-item" href=""></a></li>
                     </ul>
                 </ul>
                 </div>
